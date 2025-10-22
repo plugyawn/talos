@@ -98,4 +98,38 @@ That's what equilibriums are [?]
 Marginal utility as the source of price. 
 Independently discovered by <Jevons>, <Menger>, <Walras> in 1870s.
 
+Marginal utility: additional utility derived from consuming one more unit of a good or service. 
+
+In this case, the rentee will rent an apartment if the marginal utility of renting the apartment exceeds the marginal cost (the rent). In the case that the outer ring apartments do not exist, the marginal utility is the utility of living in the inner ring apartment minus the utility of not having an apartment at all (let's assume homelessness is infinite disutility).
+
+However -- the outer ring apartments do exist. Hence, the marginal utility of renting an inner ring apartment is the utility of living in the inner ring apartment minus the utility of living in the outer ring apartment. 
+
+Let's assume the outer ring apartments have a fixed rent of $p_o$. In this case, the marginal utility of renting an inner ring apartment can be expressed as:
+$$ MU = (U_i - p_i) - (U_o - p_o) $$
+
+This fallback case is important -- I have a feeling this is ultimately what "prepares" the function for calculus.
+
+Let us assume $U_o$ is zero. Then, the marginal utility is $$ MU = (U_i - p_i) - (0 - p_o) = (U_i - p_i) + p_o $$
+
+Or, more rigorously, $$ MU = \Delta{U} - (p_i - p_o) $$
+
+The renter will rent the inner ring apartment if $MU > 0$, i.e, if $$ \Delta{U} > (p_i - p_o) $$
+
+When the marginal utility is exactly zero, the renter is indifferent between renting the inner ring apartment and renting the outer ring apartment. This gives us the reservation price for the inner ring apartment as $$ p_i = \Delta{U} + p_o $$
+
+Anything below this reservation price, the renter will rent the inner ring apartment; anything above, they will rent the outer ring apartment.
+
+How does this allow us to construct the demand curve?
+
+An easy way to do this is to see who demands an apartment -- demand is not in the head of the consumer; it's the number of actual consumers who will rent the apartment at a given price.
+
+So, consumers who will buy it are those whose reservation price exceeds the market price. Depending on the distribution of $\Delta{U}$ across the population, we can construct the demand curve.
+
+What are the assumptions here? 
+
+We can build a preference model here: from the preference model (say, a linear combination of incomes, distances to uni, etc), we can compute the utility of each apartment for each consumer. From there, we can compute $\Delta{U}$ for each consumer, and hence their reservation price. From there, we can construct the demand curve. 
+
+In `talos`, subclass `PreferenceModel` to create a preference model for apartment renters. Then, use this to compute the demand curve based on the distribution of reservation prices. A sweep across prices will give us the demand curve.
+
+A similar preference model exists for landlords, which can be used to compute the supply curve based on reservation prices of landlords.
 ----
