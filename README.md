@@ -1,4 +1,4 @@
-![talos_logo](assets/logo.png)
+<img src="assets/logo.png" alt="talos_logo" width="350">
 
 Talos Engine is accelerated economics for Python. It provides fast, flexible tools for building and simulating agent-based economic models, with planned support for large-population modelling, abstract simulations with LLMs, and more. 
 
