@@ -1,0 +1,23 @@
+# Virtual environments
+.venv/
+.uv/
+.python-version
+.pdf
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Project artifacts
+artifacts/
+
+# Jupyter and editor state
+.ipynb_checkpoints/
+*.swp
+.DS_Store
